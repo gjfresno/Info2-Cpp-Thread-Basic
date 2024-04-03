@@ -22,30 +22,3 @@ int main() {
     return 0;
 }
 
-
-
-
-
-
-
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-int main() {
-    std::vector<int> numbers = {1, 2, 3, 4, 5};
-
-    // Imprime cada número en la consola utilizando una lambda
-    std::for_each(numbers.begin(), numbers.end(), [](int n) {
-        std::cout << n << " ";
-    });
-
-    // Imprime la suma de todos los números utilizando una lambda
-    int sum = 0;
-    std::for_each(numbers.begin(), numbers.end(), [&](int n) {
-        sum += n;
-    });
-    std::cout << "\nLa suma de los numeros es: " << sum << std::endl;
-
-    return 0;
-}
